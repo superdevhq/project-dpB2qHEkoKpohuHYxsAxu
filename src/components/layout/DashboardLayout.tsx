@@ -1,12 +1,11 @@
 
 import { useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import { FileText, LayoutDashboard, Settings, Templates, User, Menu, X, LogOut } from "lucide-react";
+import { FileText, LayoutDashboard, Settings, BookOpen, User, Menu, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Separator } from "@/components/ui/separator";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 interface SidebarItemProps {
@@ -47,7 +46,7 @@ const Sidebar = () => {
       href: "/dashboard/resumes",
     },
     {
-      icon: <Templates className="h-5 w-5" />,
+      icon: <BookOpen className="h-5 w-5" />,
       label: "Templates",
       href: "/dashboard/templates",
     },
