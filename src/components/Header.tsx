@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { FileText, Menu } from "lucide-react";
+import { FileText, Menu, LayoutDashboard } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -39,6 +39,12 @@ const Header = () => {
           <Button asChild className="hidden md:flex">
             <Link to="/builder">Create Resume</Link>
           </Button>
+          <Button asChild variant="ghost" className="hidden md:flex">
+            <Link to="/dashboard">
+              <LayoutDashboard className="h-5 w-5 mr-2" />
+              Dashboard
+            </Link>
+          </Button>
           
           <Sheet>
             <SheetTrigger asChild>
@@ -66,6 +72,12 @@ const Header = () => {
                 </Link>
                 <Button asChild className="mt-2">
                   <Link to="/builder">Create Resume</Link>
+                </Button>
+                <Button asChild variant="outline" className="mt-2">
+                  <Link to="/dashboard">
+                    <LayoutDashboard className="h-5 w-5 mr-2" />
+                    Dashboard
+                  </Link>
                 </Button>
               </nav>
             </SheetContent>
